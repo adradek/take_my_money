@@ -43,6 +43,7 @@ GEM
     arel (8.0.0)
     autoprefixer-rails (10.4.21.0)
       execjs (~> 2)
+    bcrypt (3.1.22)
     bindex (0.5.0)
     bootstrap-sass (3.3.7)
       autoprefixer-rails (>= 5.2.1)
@@ -73,6 +74,12 @@ GEM
       activerecord (>= 5.a)
       database_cleaner-core (~> 2.0)
     database_cleaner-core (2.0.1)
+    devise (4.4.3)
+      bcrypt (~> 3.0)
+      orm_adapter (~> 0.1)
+      railties (>= 4.1.0, < 6.0)
+      responders
+      warden (~> 1.2.3)
     diff-lcs (1.6.2)
     erubi (1.7.0)
     execjs (2.7.0)
@@ -112,6 +119,7 @@ GEM
     nio4r (2.2.0)
     nokogiri (1.8.2)
       mini_portile2 (~> 2.3.0)
+    orm_adapter (0.5.0)
     pg (0.21.0)
     public_suffix (5.1.1)
     puma (3.11.2)
@@ -146,6 +154,9 @@ GEM
     rb-inotify (0.9.10)
       ffi (>= 0.5.0, < 2)
     regexp_parser (2.12.0)
+    responders (3.0.1)
+      actionpack (>= 5.0)
+      railties (>= 5.0)
     rspec-core (3.13.6)
       rspec-support (~> 3.13.0)
     rspec-expectations (3.13.5)
@@ -208,6 +219,8 @@ GEM
       thread_safe (~> 0.1)
     uglifier (4.1.5)
       execjs (>= 0.3.0, < 3)
+    warden (1.2.7)
+      rack (>= 1.0)
     web-console (3.5.1)
       actionview (>= 5.0)
       activemodel (>= 5.0)
@@ -228,6 +241,7 @@ DEPENDENCIES
   capybara
   coffee-rails (~> 4.2)
   database_cleaner
+  devise (~> 4.4.1)
   factory_bot_rails
   jbuilder (~> 2.5)
   jquery-rails
