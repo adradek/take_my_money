@@ -1,0 +1,39 @@
+inherit_mode:
+  merge:
+    - Exclude # Exclude instructions are merged, not overwritten
+
+require:
+  - standard
+  - standard-custom
+  - standard-performance
+  - rubocop-rails
+  - rubocop-performance
+  - rubocop-rspec
+
+inherit_gem:
+  standard: config/base.yml # might be: config/ruby-3.0.yml
+  standard-performance: config/base.yml
+  standard-custom: config/base.yml
+  standard-rails: config/base.yml
+
+inherit_from:
+  - .rubocop_todo.yml
+  - .rubocop_strict.yml
+# Sometimes we enable metrics cops
+# (which are disabled in Standard by default)
+#
+# Metrics:
+#   Enabled: true
+
+# Global options, like Ruby version
+# AllCops:
+#   SuggestExtensions: false
+#   TargetRubyVersion: 3.2
+
+# My personal preferences
+# Layout/HashAlignment:
+#   Exclude:
+#     - 'lib/tasks/auto_annotate_models.rake'
+
+# RSpec/MultipleMemoizedHelpers:
+#   Max: 8
