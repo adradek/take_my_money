@@ -4,6 +4,12 @@ pre-commit:
       tags: backend style
       run: docker compose exec web bin/rubocop
 
+pre-push:
+  commands:
+    rspec:
+      tags: backend rspec test
+      run: docker compose exec web bundle exec rspec
+
 # EXAMPLE USAGE:
 #
 #   Refer for explanation to following link:
