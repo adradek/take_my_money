@@ -19,6 +19,7 @@ inherit_gem:
 inherit_from:
   - .rubocop_todo.yml
   - .rubocop_strict.yml
+
 # Sometimes we enable metrics cops
 # (which are disabled in Standard by default)
 #
@@ -31,6 +32,8 @@ inherit_from:
 #   TargetRubyVersion: 3.2
 
 # My personal preferences
+Layout/SpaceInsideHashLiteralBraces:
+  EnforcedStyle: space
 # Layout/HashAlignment:
 #   Exclude:
 #     - 'lib/tasks/auto_annotate_models.rake'
