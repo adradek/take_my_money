@@ -2,13 +2,13 @@ pre-commit:
   commands:
     rubocop:
       tags: backend style
-      run: docker compose exec web bin/rubocop
+      run: docker compose exec web bin/rubocop --force-exclusion {staged_files}
 
 pre-push:
   commands:
     rspec:
       tags: backend rspec test
-      run: docker compose exec web bundle exec rspec
+      run: docker compose exec web bin/rspec
 
 # EXAMPLE USAGE:
 #

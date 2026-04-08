@@ -34,6 +34,7 @@ inherit_from:
 # My personal preferences
 Layout/SpaceInsideHashLiteralBraces:
   EnforcedStyle: space
+
 # Layout/HashAlignment:
 #   Exclude:
 #     - 'lib/tasks/auto_annotate_models.rake'
