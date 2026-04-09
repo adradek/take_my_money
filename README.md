@@ -1,6 +1,6 @@
 # Take My Money: Accepting Payments on the Web
-## by Noel Rappin
-### (My Personal Walkthrough)
+### by Noel Rappin
+#### (My Personal Walkthrough)
 
 This repository is the result of my walkthrough of Noel Rappin's tutorial. Unfortunately, the code that was supposed to accompany the book is no longer available at the address listed on the Pragmatic Bookshelf portal. So I used [Alexander Khlipun's repository](https://github.com/alexander-kh/take-my-money) as the primary source.
 
