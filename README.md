@@ -1,24 +1,46 @@
-# README
+# Take My Money: Accepting Payments on the Web
+## by Noel Rappin
+### (My Personal Walkthrough)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This repository is the result of my walkthrough of Noel Rappin's tutorial. Unfortunately, the code that was supposed to accompany the book is no longer available at the address listed on the Pragmatic Bookshelf portal. So I used [Alexander Khlipun's repository](https://github.com/alexander-kh/take-my-money) as the primary source.
 
-Things you may want to cover:
+I wrapped the application in Docker, slightly updated the software versions, and added a few code quality tools. Overall, I hope this work proves useful to someone.
 
-* Ruby version
+> The code from "Take My Money" book, published by the Pragmatic Bookshelf.
+> Copyrights apply to this code. It may not be used to create training material, courses, books, articles, and the like. Contact the publisher if you are in doubt.
 
-* System dependencies
+Walkthrough progress: completed chapter 1/13
 
-* Configuration
+**Versions used:**
 
-* Database creation
+  * Docker Composer: 2+
+  * Ruby: 2.7.8 (Original book code uses Ruby 2.5.0)
+  * Rails: 5.1.4
+  * PostgreSQL: 12.2 (10.1)
+  * RSpec: 3.7
 
-* Database initialization
+**Setup:**
 
-* How to run the test suite
+  * Building:
+  ```
+  docker compose build
+  ```
 
-* Services (job queues, cache servers, search engines, etc.)
+  * Initializing:
+  ```
+  docker compose run --rm web bash
 
-* Deployment instructions
+  # inside the container:
+  bundle install
+  bin/rails db:create
+  bin/rails db:migrate
+  bin/rails db:seed
 
-* ...
+  exit
+  ```
+
+**Testing:**
+
+  ```
+  docker compose run --rm web bin/rspec
+  ````
