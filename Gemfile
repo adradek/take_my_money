@@ -25,6 +25,8 @@ gem "bootstrap-sass", "~> 3.3.7"
 gem "jquery-rails"
 gem "devise", "~> 4.4.1"
 gem "money-rails", "~> 1.10.0"
+gem "dotenv-rails", "~> 2.2.1"
+gem "stripe", "~> 3.9.2"
 
 group :development, :test do
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
