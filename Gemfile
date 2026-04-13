@@ -48,6 +48,8 @@ group :test do
   gem "capybara"
   gem "capybara-screenshot", "~> 1.0.18"
   gem "database_cleaner"
+  gem "vcr", "~> 4.0.0"
+  gem "webmock", "~> 3.3.0"
 end
 
 gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]

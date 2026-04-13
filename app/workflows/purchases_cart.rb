@@ -1,10 +1,10 @@
 class PurchasesCart
-  attr_accessor :user, :stripe_token, :purchase_amount, :success, :payment
+  attr_accessor :user, :stripe_token, :purchase_amount_cents, :success, :payment
 
   def initialize(user:, stripe_token:, purchase_amount_cents:)
     @user = user
     @stripe_token = stripe_token
-    @purchase_amount = purchase_amount
+    @purchase_amount_cents = purchase_amount_cents
     @success = false
   end
 
@@ -33,7 +33,7 @@ class PurchasesCart
   def payment_attributes
     {
       user_id: user.id,
-      price_cents: purchase_amount.cents,
+      price_cents: purchase_amount_cents,
       status: "created",
       reference: Payment.generate_reference,
       payment_method: "stripe"

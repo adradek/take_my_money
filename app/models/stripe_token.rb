@@ -10,11 +10,13 @@ class StripeToken
     @cvc = cvc
   end
 
+  # rubocop:disable Rails/SaveBang
   def token
-    @token ||= Stripe::Token.create!(
+    @token ||= Stripe::Token.create(
       card: { number: credit_card_number, exp_month: expiration_month, exp_year: expiration_year, cvc: cvc }
     )
   end
+  # rubocop:enable Rails/SaveBang
 
   def to_s
     "STRIPE TOKEN: #{id}"
