@@ -7,7 +7,7 @@ class Ticket < ApplicationRecord
   monetize :price_cents
 
   enum access: { general: 0 }
-  enum status: { unsold: 0, waiting: 1 }
+  enum status: { unsold: 0, waiting: 1, purchased: 2 }
 
   def place_in_cart_for(user)
     update(status: :waiting, user: user)

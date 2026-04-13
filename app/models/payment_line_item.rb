@@ -1,4 +1,6 @@
 class PaymentLineItem < ApplicationRecord
+  belongs_to :buyable, polymorphic: true
   belongs_to :payment
-  belongs_to :buyable
+
+  monetize :price_cents
 end

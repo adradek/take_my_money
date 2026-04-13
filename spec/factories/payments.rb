@@ -1,7 +1,7 @@
 FactoryBot.define do
   factory :payment do
     user { nil }
-    price { "" }
+    price { 100 }
     status { 1 }
     reference { "MyString" }
     payment_method { "MyString" }

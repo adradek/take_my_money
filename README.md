@@ -9,10 +9,10 @@ I wrapped the application in Docker, slightly updated the software versions, and
 > The code from "Take My Money" book, published by the Pragmatic Bookshelf.
 > Copyrights apply to this code. It may not be used to create training material, courses, books, articles, and the like. Contact the publisher if you are in doubt.
 
-Walkthrough progress: completed chapter 1.5/13
+Walkthrough progress: completed chapter 1.8/13
 
 **Notes**:
-- Ch2: It turnes out that the stripe server approach is not good for today. For now they consider the token-charge style of payment as a legacy. So, I implemented the book code inside the project, but wasn't able to test it in Rails console even with a fake data
+- Chapter 2: It turnes out that the stripe "server approach" is not good for today. For now they consider the token-charge style of payment as a legacy. So, I implemented the book code inside the project, but wasn't able to test it in Rails console even with a fake data
 
 **Versions used:**
 
